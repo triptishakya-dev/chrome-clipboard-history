@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clipboard History</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <h1>Clipboard History</h1>
+        <p>Keep copied text and images for 48 hours</p>
+      </div>
+      <span class="clock">48h</span>
+    </header>
+
+    <div class="toolbar">
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Search your history..."
+        aria-label="Search clipboard history"
+      >
+      <button id="clearButton" type="button">Clear all</button>
+    </div>
+
+    <div id="historyList" class="history-list">
+      <p class="empty-state">Loading clipboard history...</p>
+    </div>
+
+    <footer>
+      <span id="itemCount">0 items</span>
+      <span>Stored locally</span>
+    </footer>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
