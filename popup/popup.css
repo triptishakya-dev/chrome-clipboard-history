@@ -1,0 +1,186 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 380px;
+  min-height: 300px;
+  max-height: 560px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  background: #f8fafc;
+}
+
+.app {
+  padding: 18px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.clock {
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+#searchInput {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  font-size: 13px;
+}
+
+#searchInput:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px #dbeafe;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#clearButton {
+  padding: 0 10px;
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+#clearButton:hover {
+  background: #fecaca;
+}
+
+.history-list {
+  max-height: 330px;
+  overflow-y: auto;
+}
+
+.history-item {
+  padding: 12px;
+  margin-bottom: 9px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.item-text {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.item-image {
+  display: block;
+  width: 100%;
+  max-height: 210px;
+  margin: 0 0 10px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #f1f5f9;
+}
+
+.item-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  font-size: 10px;
+}
+
+.item-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.copy-button {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  background: #2563eb;
+  color: white;
+}
+
+.copy-button:hover {
+  background: #1d4ed8;
+}
+
+.copy-button.is-copied {
+  background: #15803d;
+}
+
+.delete-button {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.delete-button:hover {
+  background: #e2e8f0;
+}
+
+.copy-button svg,
+.delete-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+.empty-state {
+  padding: 28px 10px;
+  text-align: center;
+  color: #64748b;
+  font-size: 13px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 11px;
+}
