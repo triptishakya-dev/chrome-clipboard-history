@@ -1,0 +1,34 @@
+
+{
+  "manifest_version": 3,
+  "name": "Clipboard History",
+  "version": "1.0.0",
+  "description": "Keep a local history of copied text and images for 48 hours.",
+  "permissions": [
+    "storage",
+    "alarms",
+    "offscreen",
+    "clipboardRead",
+    "clipboardWrite",
+    "unlimitedStorage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "minimum_chrome_version": "109",
+  "action": {
+    "default_title": "Clipboard History",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
